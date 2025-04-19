@@ -34,7 +34,7 @@ const ProductDescription = () => {
 					around detected gallstones, and users can download the
 					processed image for further analysis.
 				</p>
-				<p className="w-full text-white font-bold text-sm">
+				<p className="w-full text-white font-bold text-sm mt-5">
 					Watch our promotional video
 				</p>
 
