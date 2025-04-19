@@ -22,8 +22,8 @@ const ImageUploader = () => {
 				{/* First div */}
 				<div className="w-full sm:w-full md:w-1/2 flex flex-col justify-center">
 					<p className="text-white text-center p-6 text-sm">
-						Click 'Browse Files' to select the ultrasound image
-						you'd like to be annotated.
+						Click 'Browse Files' to select a gallbladder ultrasound
+						image for annotation.
 					</p>
 					<p className="text-white/30 text-[0.7rem] text-center mb-5">
 						Supported formats: JPG, JPEG, PNG (Max: 200MB)
