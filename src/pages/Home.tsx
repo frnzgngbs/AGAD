@@ -1,12 +1,39 @@
+import { useEffect, useRef, useState } from "react";
 import ImageUploader from "../components/ImageUploader";
 import ProductDescription from "../components/ProductDescription";
 import ProductName from "../components/ProductName";
 import Square from "../components/Square";
+import AnnotatedImage from "../components/AnnotatedImage";
+import Spinner from "../components/Spinner";
 
 function Home() {
+	const [ultraSoundImage, setUltraSoundImage] = useState<File | null>(null);
+	const [imagePreview, setImagePreview] = useState<string | null>(null);
+	const [isLoading, setIsLoading] = useState<boolean>(false);
+	const bottomRef = useRef<HTMLDivElement | null>(null);
+
+	useEffect(() => {
+		if (ultraSoundImage) {
+			const imageUrl = URL.createObjectURL(ultraSoundImage);
+			setImagePreview(imageUrl);
+
+			return () => {
+				URL.revokeObjectURL(imageUrl);
+			};
+		} else {
+			setImagePreview(null);
+		}
+	}, [ultraSoundImage]);
+
+	useEffect(() => {
+		if (isLoading && bottomRef.current) {
+			bottomRef.current.scrollIntoView({ behavior: "smooth" });
+		}
+	}, [isLoading]);
+
 	return (
 		<>
-			<div className="w-full flex-center flex-col">
+			<div className="w-full flex-center flex-col p-5">
 				<div>
 					<Square />
 				</div>
@@ -29,8 +56,27 @@ function Home() {
 				</div>
 
 				<div className="card">
-					<ImageUploader />
+					<ImageUploader
+						setUltraSoundImage={setUltraSoundImage}
+						setIsLoading={setIsLoading}
+						bottomRef={bottomRef}
+					/>
 				</div>
+
+				{isLoading && (
+					<div ref={bottomRef}>
+						<Spinner />
+					</div>
+				)}
+
+				{imagePreview && ultraSoundImage && !isLoading && (
+					<div className="card" ref={bottomRef}>
+						<AnnotatedImage
+							ultraSoundImage={imagePreview}
+							file={ultraSoundImage}
+						/>
+					</div>
+				)}
 			</div>
 		</>
 	);
