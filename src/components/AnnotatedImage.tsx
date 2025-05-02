@@ -17,7 +17,7 @@ const AnnotatedImage = ({ ultraSoundImage, file }: AnnotatedImageProps) => {
 				<h2 className="text-white text-lg font-semibold mb-4">
 					Selected Ultrasound Image
 				</h2>
-				<div className="bg-[#1A223A] rounded-xl p-4">
+				<div className="bg-[#1A223A]/2ill  rounded-xl p-4">
 					<img
 						src={ultraSoundImage}
 						alt="Ultrasound"
