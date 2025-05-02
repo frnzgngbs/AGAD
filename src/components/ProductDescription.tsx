@@ -17,18 +17,6 @@ const ProductDescription = () => {
 						into two categories:
 					</p>
 				</div>
-				<ul className="w-full list-disc list-inside">
-					<li className="text-white text-sm">
-						"<span className="font-bold">Gallstones Detected</span>
-						", with the average detection confidence displayed
-					</li>
-					<li className="text-white text-sm">
-						"
-						<span className="font-bold">
-							No Gallstones Detected"
-						</span>
-					</li>
-				</ul>
 				<p className="text-white text-md">
 					The results are visually represented with bounding boxes
 					around detected gallstones, and users can download the

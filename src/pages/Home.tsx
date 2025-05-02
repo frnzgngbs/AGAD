@@ -34,9 +34,6 @@ function Home() {
 	return (
 		<>
 			<div className="w-full flex-center flex-col p-5">
-				<div>
-					<Square />
-				</div>
 				<div className="mt-2">
 					<ProductName
 						fontSize="45px"
