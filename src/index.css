@@ -2,14 +2,14 @@
 
 html,
 body {
-	background-color: #050a16;
+	background-color: #1e1e1e;
 	height: 100%;
 	margin: 0;
 }
 
 @layer components {
 	.card {
-		@apply flex justify-center w-full bg-[#0C111F] mt-8 p-8 rounded-xl border border-[#1C2533];
+		@apply flex justify-center w-full bg-[#0C111F]/20 mt-8 p-8 rounded-xl border border-[#1C2533];
 	}
 }
 

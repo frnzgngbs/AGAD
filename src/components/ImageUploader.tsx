@@ -86,7 +86,7 @@ const ImageUploader = ({
 					<div className="flex-center space-x-2">
 						<button
 							onClick={handleButtonClick}
-							className="w-full max-w-full bg-gradient-to-r from-[#2861EB] to-[#8F34EA] rounded-xl py-2 text-white font-semibold transition-transform duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg hover:bg-gradient-to-l active:scale-95 active:bg-gradient-to-r active:from-[#8F34EA] active:to-[#2861EB] focus:outline-none focus:ring-2 focus:ring-[#2861EB] cursor-pointer text-sm">
+							className="w-full max-w-full bg-gradient-to-r from-[#c1ff72] to-[#c1ff72] rounded-xl py-2 text-white font-semibold transition-transform duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg hover:bg-gradient-to-l active:scale-95 active:bg-gradient-to-r active:from-[#8F34EA] active:to-[#2861EB] focus:outline-none focus:ring-2 focus:ring-[#2861EB] cursor-pointer text-sm">
 							Browse Files
 						</button>
 						{!imagePreview ? (
@@ -98,7 +98,7 @@ const ImageUploader = ({
 						) : (
 							<button
 								onClick={handleAnnotateClick}
-								className="w-full max-w-full rounded-xl py-2 text-white font-semibold text-sm bg-gradient-to-r from-[#2861EB] to-[#8F34EA] hover:scale-105 hover:shadow-lg hover:bg-gradient-to-l active:scale-95 active:bg-gradient-to-r active:from-[#8F34EA] active:to-[#2861EB] transition-transform duration-300 ease-in-out transform cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#2861EB]">
+								className="w-full max-w-full rounded-xl py-2 text-white font-semibold text-sm bg-gradient-to-r from-[#c1ff72] to-[#c1ff72] hover:scale-105 hover:shadow-lg hover:bg-gradient-to-l active:scale-95 active:bg-gradient-to-r active:from-[#8F34EA] active:to-[#2861EB] transition-transform duration-300 ease-in-out transform cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#2861EB]">
 								Annotate
 							</button>
 						)}

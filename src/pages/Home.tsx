@@ -2,7 +2,6 @@ import { useEffect, useRef, useState } from "react";
 import ImageUploader from "../components/ImageUploader";
 import ProductDescription from "../components/ProductDescription";
 import ProductName from "../components/ProductName";
-import Square from "../components/Square";
 import AnnotatedImage from "../components/AnnotatedImage";
 import Spinner from "../components/Spinner";
 
@@ -37,8 +36,8 @@ function Home() {
 				<div className="mt-2">
 					<ProductName
 						fontSize="45px"
-						startColor="#2861EB"
-						endColor="#8F34EA"
+						startColor="#c1ff72"
+						endColor="#c1ff72"
 					/>
 				</div>
 
